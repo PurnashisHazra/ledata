@@ -1,0 +1,12 @@
+.site-footer{ margin-top: 64px; padding: 80px 24px 56px; background: linear-gradient(180deg, rgba(0,0,0,0.55), transparent 6%), transparent; }
+.footer-inner{ max-width: 1100px; margin: 0 auto; display:flex; justify-content:space-between; align-items:flex-start; }
+.footer-left{ color: #fff; text-align:left; max-width: 720px; }
+.footer-left h2{ font-family: 'Fira Mono', monospace; font-size: 2.6rem; letter-spacing: 0.5px; margin: 0 0 18px 0; font-weight: 400; }
+.footer-contact{ margin: 10px 0; color: #ddd; font-size: 0.95rem; text-align:left; }
+.footer-legal{ margin: 12px 0; color: #bdbdbd; font-family: 'Fira Mono', monospace; text-align:left; }
+.footer-icons{ margin-top: 18px; display:flex; gap:10px; justify-content:flex-start; }
+.footer-right{ text-align:right; color:#fff; display:flex; flex-direction:column; align-items:flex-end; gap:12px; }
+.footer-brand{ font-family: 'Fira Mono', monospace; font-size: 1.15rem; margin-bottom:6px; display:flex; align-items:center; gap:12px; }
+.footer-copy{ color:#9f9f9f; font-family: 'Fira Mono', monospace; }
+.social-icon{ display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:6px; background:#fff; color:#111; text-align:center; line-height:34px; border:1px solid rgba(0,0,0,0.08); box-shadow: 0 2px 0 rgba(0,0,0,0.12); }
+.social-icon img{ width:18px; height:18px; display:block; }

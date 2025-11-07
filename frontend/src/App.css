@@ -1,0 +1,334 @@
+
+body, .landing-root {
+  background: #111;
+  color: #fff;
+  font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: #181818;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.nav-auth button {
+  margin-left: 12px;
+  background: #fff;
+  color: #181818;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.signup-btn {
+  font-weight: bold;
+}
+
+.quotes-section {
+  margin: 32px auto;
+  max-width: 1100px;
+  background: #181818;
+  padding: 24px;
+  border-radius: 8px;
+  font-style: italic;
+  box-sizing: border-box;
+}
+.quotes-section blockquote {
+  margin: 12px 0;
+  font-size: 1.1rem;
+}
+.not-anymore-btn {
+  margin-top: 16px;
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.quote-cta-wrapper { margin-top: 12px; }
+
+.discover-section {
+  text-align: left;
+  margin: 40px auto 0 auto;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+.discover-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.discover-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.discover-section ul {
+  list-style: disc inside;
+  margin-left: 1rem;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin: 40px auto;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+.stat-block {
+  background: #222;
+  padding: 24px 32px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 160px;
+}
+.stat-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.stat-desc {
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.search-section {
+  margin: 32px auto;
+  max-width: 1100px;
+  background: #181818;
+  padding: 24px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.filter-btn, .search-btn {
+  background: none;
+  border: 1px dashed #fff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  cursor: pointer;
+}
+.search-btn {
+  background: #fff;
+  color: #181818;
+  font-weight: bold;
+}
+
+.datasets-section {
+  margin: 32px auto;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+.datasets-section { position: relative; }
+.dataset-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.dataset-card {
+  background: #181818;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 220px;
+}
+.dataset-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.dataset-year {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.dataset-desc {
+  font-size: 1rem;
+  color: #ccc;
+}
+.dataset-tags {
+  display: flex;
+  gap: 8px;
+}
+.tag-btn {
+  background: none;
+  border: 1px dashed #fff;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.dataset-icons {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 10px;
+}
+.dataset-source {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+.goto-datasets-btn {
+  margin: 32px auto 0 auto;
+  display: block;
+  background: #fff;
+  color: #181818;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* translucent overlay that sits over the dataset cards */
+.datasets-overlay{
+  position: absolute; /* positioned inside .datasets-section */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* center vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* allow underlying interactions except buttons */
+  width: 90%; /* cover ~90% of the cards area */
+  max-width: 1100px;
+  height: 90%; /* cover ~90% of the cards area vertically */
+  min-height: 180px;
+}
+.datasets-overlay::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  z-index: 2;
+}
+.overlay-buttons{
+  position: relative;
+  z-index: 3;
+  display:flex;
+  gap: 12px;
+  margin: 0;
+  pointer-events: auto; /* enable clicks on the buttons */
+  align-items: center;
+  flex-direction: column; /* stack vertically */
+}
+/* unified overlay button sizing */
+.overlay-btn{
+  width: 260px; /* fixed width for stacked buttons */
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px; /* fixed height so both buttons exactly match */
+}
+.overlay-btn.primary{
+  background: #fff;
+  color: #181818;
+  border: none;
+  font-weight: bold;
+}
+.overlay-btn.secondary{
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+footer {
+  margin: 32px 0;
+  text-align: center;
+}
+.system-settings-btn {
+  background: #222;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Global link styling: white, no underline, button-like */
+a, a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* utility class when a link should visually look like a button */
+.link-btn {
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+
+.link-btn.secondary {
+  background: transparent;
+  border: 1px dashed #fff;
+  color: #fff;
+}
+
+/* Vision section */
+.vision-section{
+  margin: 56px auto 0 auto;
+  max-width: 1100px;
+  box-sizing: border-box;
+  padding: 48px 24px;
+}
+.vision-inner{
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.vision-left{ flex: 1; }
+.vision-left h1{ font-family: 'Fira Mono', monospace; font-size: 2.4rem; margin: 0 0 18px 0; }
+.vision-body{ color: #ddd; line-height: 1.6; max-width: 640px; }
+.vision-right{ width: 360px; display:flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.vision-cta-desc{ font-style: italic; color: #ddd; }
+.vision-cta{ background: #efefef; color: #111; border: none; padding: 12px 20px; border-radius: 4px; cursor: pointer; }
+
+/* footer */
+.site-footer{ margin-top: 64px; padding: 64px 24px; background: transparent; }
+.footer-inner{ max-width: 1100px; margin: 0 auto; display:flex; justify-content:space-between; align-items:center; }
+.footer-left{ color: #fff; }
+.footer-left h2{ font-family: 'Fira Mono', monospace; font-size: 2rem; margin: 0 0 12px 0; }
+.footer-contact{ margin: 8px 0; color: #ddd; }
+.footer-legal{ margin: 6px 0; color: #bbb; }
+.footer-icons{ margin-top: 12px; display:flex; gap:8px; }
+.footer-right{ text-align:right; color:#fff; }
+.footer-brand{ font-family: 'Fira Mono', monospace; font-size: 1.2rem; margin-bottom:12px; }
+.footer-copy{ color:#aaa; }

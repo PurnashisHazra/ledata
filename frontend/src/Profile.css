@@ -1,0 +1,103 @@
+/* Minimal profile styles */
+.profile-root{
+	font-family: 'Fira Mono', monospace;
+	color: #fff;
+	background: #0b0b0b;
+	min-height: 100vh;
+	padding: 40px 20px 80px 20px;
+}
+
+.profile-title{
+	font-size: 34px;
+	text-align: center;
+	margin: 8px 0 28px 0;
+	text-decoration: underline;
+	text-underline-offset: 8px;
+}
+
+.profile-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px 28px;
+	max-width: 1100px;
+	margin: 0 auto;
+	align-items: start;
+}
+
+.profile-input input,
+.profile-input textarea{
+	width: 100%;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.85);
+	color: #fff;
+	padding: 20px 22px;
+	font-family: inherit;
+	font-size: 15px;
+	box-sizing: border-box;
+	outline: none;
+}
+
+	.edit-wrap{ position: relative }
+	.edit-icon{
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		background: none;
+		border: none;
+		color: rgba(255,255,255,0.8);
+		cursor: pointer;
+		font-size: 14px;
+	}
+	.profile-input input[disabled]{ opacity: 0.65 }
+
+.profile-input input::placeholder, .profile-input textarea::placeholder{ color: rgba(255,255,255,0.45); }
+
+.profile-input input:disabled{ opacity: 0.9; color: #ddd; }
+
+.profile-input.large textarea{ min-height: 220px; resize: vertical; }
+.profile-input.large input{ min-height: 220px; }
+
+/* make first large (bio) span left column and second (image) span right column explicitly */
+.profile-input.large:first-of-type{ grid-column: 1 / 2; }
+.profile-input.large:nth-of-type(2){ grid-column: 2 / 3; }
+
+.controls-row{ max-width:1100px; margin: 18px auto 0; display:flex; align-items:center; gap:18px }
+.small-toggle{ border:1px solid rgba(255,255,255,0.85); background:transparent; color:#fff; padding:6px 12px; cursor:pointer }
+.small-toggle.active{ background:#fff; color:#111 }
+
+.public-link{ color:#7b3fff; text-decoration:underline; display:inline-block; margin-top:12px }
+
+.slug-input{ background:transparent; border:1px solid rgba(255,255,255,0.15); color:#fff; padding:10px 12px; font-family:inherit; font-size:15px; min-width:180px }
+.slug-save{ background:#7b3fff; color:#fff; border:none; padding:10px 14px; cursor:pointer; border-radius:4px }
+.slug-save:disabled{ opacity:0.6; cursor:default }
+
+.save-btn{ background:#eee; color:#111; padding:12px 34px; border:none; border-radius:6px; display:block; margin:34px auto 0; font-size:16px; cursor:pointer }
+
+@media (max-width: 900px){
+	.profile-grid{ grid-template-columns: 1fr; }
+	.profile-input.large:nth-of-type(2){ grid-column: auto; }
+}
+
+.tab-btn{
+	background:transparent;
+	border:none;
+	color:#fff;
+	padding:12px 24px;
+	cursor:pointer;
+	font-family: 'Fira Mono', monospace;
+	font-size: 28px;
+	letter-spacing: 1px;
+}
+.tab-btn:focus{ outline: 2px dashed rgba(255,255,255,0.2); }
+.tab-btn.active{
+	background: transparent;
+	color:#fff;
+	text-decoration: underline;
+	text-underline-offset: 10px;
+	font-weight: 600;
+}
+
+.security-root{ display:flex;flex-direction:column;align-items:center;gap:24px;margin-top:40px }
+.security-btn{ background:#eee;color:#111;padding:18px 60px;border-radius:6px;cursor:pointer;font-size:18px }
+.security-btn.danger{ background:transparent;color:#fff;border:1px dashed rgba(255,255,255,0.9) }

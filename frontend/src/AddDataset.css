@@ -1,0 +1,304 @@
+
+.add-dataset-nav {
+  width: 100%;
+  margin: 0 auto 32px auto;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add-dataset-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  font-family: 'Fira Mono', monospace;
+  font-size: 1.3em;
+  color: #fff;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 1100px;
+}
+.add-dataset-logo {
+  font-size: 1.3em;
+  font-weight: normal;
+  margin-right: 24px;
+}
+.add-dataset-icons {
+  display: flex;
+  gap: 8px;
+  font-size: 1.2em;
+  margin-right: 24px;
+}
+.add-dataset-navlinks {
+  font-size: 1em;
+  margin-right: 24px;
+  white-space: pre;
+}
+.add-dataset-addbtn {
+  background: #fff;
+  color: #111;
+  border: none;
+  border-radius: 0;
+  font-size: 1.1em;
+  font-family: inherit;
+  font-weight: normal;
+  padding: 8px 32px;
+  margin-right: 18px;
+  cursor: pointer;
+}
+.add-dataset-profileicon {
+  font-size: 1.3em;
+}
+.add-dataset-tabs {
+  font-size: 1.6em;
+  font-family: 'Fira Mono', monospace;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 1100px;
+}
+.quick-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.quick-metrics-label {
+  font-size: 1em;
+  text-align: left;
+  align-self: center;
+  font-family: inherit;
+}
+.quick-metrics-input {
+  font-size: 1em;
+  text-align: right;
+  align-self: center;
+  font-family: inherit;
+  max-width: 220px;
+}
+/* AddDataset page styles */
+
+body, .add-dataset-modal {
+  font-family: 'Fira Mono', monospace;
+  background: #111;
+  color: #fff;
+}
+.add-dataset-modal {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-dataset-box {
+  background: #111;
+  color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  max-width: 1100px;
+  width: 95vw;
+  min-width: 700px;
+  border: none;
+}
+.add-dataset-border {
+  /* lighter, subtle border for sections */
+  border: 1px dashed rgba(255,255,255,0.08);
+  border-radius: 0;
+  margin-bottom: 32px;
+  padding: 24px 18px 18px 18px;
+}
+.add-dataset-header {
+  font-size: 1.3em;
+  font-weight: normal;
+  margin-bottom: 0;
+  text-align: left;
+  letter-spacing: 1px;
+  padding: 24px 18px 0 18px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-dataset-header-desc {
+  font-size: 0.95em;
+  margin-left: 12px;
+  color: #fff;
+}
+.add-dataset-close {
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: auto;
+}
+.add-dataset-label {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.add-dataset-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.add-dataset-row input {
+  flex: 1;
+}
+.add-dataset-icons-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+.add-dataset-icon {
+  font-size: 1.3em;
+}
+
+.add-dataset-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* allow rows to size to content instead of forcing equal height */
+  grid-auto-rows: auto;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.add-dataset-boxcell {
+  background: none;
+  border-radius: 0;
+  color: #fff;
+  padding: 0;
+  /* remove forced 100% height so cells don't stretch */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.add-dataset-boxcell .add-dataset-title {
+  margin-bottom: 18px;
+}
+.add-dataset-row-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+.add-dataset-row-label > div {
+  flex: 1;
+  text-align: left;
+  margin-right: 12px;
+}
+.add-dataset-row-label input {
+  flex: 1;
+  max-width: 220px;
+  text-align: right;
+}
+@media (max-width: 900px) {
+  .add-dataset-grid-2x2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 18px;
+  }
+  
+/* Hi user pill button (matches Search page) */
+.hi-user-btn {
+  background: none;
+  border: 1px dashed rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 18px;
+  font-family: inherit;
+  cursor: default;
+  font-size: 0.95em;
+}
+
+/* User dropdown menu for Hi user button */
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 36px;
+  background: #111;
+  border: 1px solid #fff;
+  padding: 8px;
+  border-radius: 6px;
+  z-index: 50;
+}
+.user-dropdown-item {
+  background: none;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+}
+.user-dropdown-item:hover { background: rgba(255,255,255,0.05); }
+}
+/* reusable in-input edit icon wrapper (used by EditDataset) */
+.edit-wrap{ position: relative }
+.edit-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  font-size: 14px;
+}
+.add-dataset-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.add-dataset-error {
+  color: #ff4d4f;
+  background: #222;
+  border-radius: 0;
+  border: 1px dashed #ff4d4f;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+.add-dataset-input {
+  background: #111;
+  color: #fff;
+  border: 1px dashed rgba(255,255,255,0.5);
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 1em;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.add-dataset-input:focus {
+  outline: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.02) inset;
+}
+.add-dataset-section:last-child {
+  margin-bottom: 0;
+}
+.add-dataset-box textarea.add-dataset-input {
+  min-height: 60px;
+  resize: vertical;
+}
+@media (max-width: 900px) {
+  .add-dataset-box {
+    padding: 0;
+    max-width: 100%;
+  }
+  .add-dataset-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .add-dataset-btn {
+    width: 100%;
+    margin: 32px auto 0 auto;
+  }
+}
