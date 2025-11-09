@@ -44,7 +44,7 @@ export default function ViewDataset(){
       if(mounted) setLoading(false);
     })();
     return () => { mounted = false };
-  }, [id]);
+  }, [id, API_URL, navigate]);
 
   if(loading) return (<div style={{padding:24}}>Loading...</div>);
 
